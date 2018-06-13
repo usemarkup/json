@@ -7,7 +7,7 @@ matrix:
       env: coveralls=true
     - php: 7.1
     - php: 7.2
-    - php: 7.3
+#    - php: 7.3
     - php: nightly
 
 sudo: false
