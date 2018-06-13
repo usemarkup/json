@@ -8,6 +8,15 @@ The following json options are always used
 - JSON_BIGINT_AS_STRING
 - JSON_THROW_ON_ERROR
 
+## Usage
+
+```php
+$json = '{"a":1}';
+$data = Encoder::decode($json);
+
+$json = Encoder::encode($data);
+```
+
 ## Similar Packages
 
 - https://github.com/webmozart/json
