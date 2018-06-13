@@ -1,0 +1,30 @@
+language: php
+
+matrix:
+  include:
+    - php: 7.1
+      env: deps=low
+      env: coveralls=true
+    - php: 7.1
+    - php: 7.2
+    - php: 7.3
+    - php: nightly
+
+sudo: false
+
+env:
+  global:
+    - deps=standard
+    - coveralls=standard
+
+install:
+  - composer self-update -q
+  - if [ "$deps" = "standard" ]; then composer --ignore-platform-reqs --prefer-stable --prefer-dist -n update; fi;
+  - if [ "$deps" = "low" ]; then composer --ignore-platform-reqs --prefer-lowest -n --prefer-stable --prefer-dist update; fi;
+  - composer require --dev --ignore-platform-reqs satooshi/php-coveralls
+
+script:
+  - make
+
+after_script:
+  - if [ "$coveralls" = "true" ]; then vendor/bin/coveralls; fi;

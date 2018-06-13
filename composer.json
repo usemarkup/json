@@ -1,0 +1,36 @@
+{
+  "name": "markup/json",
+  "description": "Json wrapper to provide a more robust Api (matching 7.3 where possible)",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gavin Staniforth",
+      "email": "gavin@usemarkup.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Markup\\Json\\": "src/"
+    },
+    "files": [
+      "src/polyfill.php",
+      "src/functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Markup\\Json\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+  },
+  "require-dev": {
+    "phpstan/phpstan-shim": "@stable",
+    "phpunit/phpunit": "@stable",
+    "squizlabs/php_codesniffer": "@stable",
+    "slevomat/coding-standard": "@stable"
+  }
+}
