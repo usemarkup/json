@@ -18,14 +18,14 @@ try {
     $data = Encoder::decode($json);
 
     $json = Encoder::encode($data);
-
 } catch (\JsonException $exception) {
-  echo $exception->getMessage(); // echoes "Syntax error"
+    echo $exception->getMessage(); // echoes "Syntax error"
 }
 ```
 
 ## Reference
 
+- https://wiki.php.net/rfc/json_throw_on_error
 - https://ayesh.me/Upgrade-PHP-7.3#json-exceptions
 - https://github.com/php/php-src/blob/master/ext/json/json.c#L257
 
