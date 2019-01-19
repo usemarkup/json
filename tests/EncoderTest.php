@@ -19,6 +19,7 @@ class EncoderTest extends TestCase
         $json = '{';
 
         $this->expectException(\JsonException::class);
+        $this->expectExceptionMessage('Syntax error');
 
         Encoder::decode($json);
     }
