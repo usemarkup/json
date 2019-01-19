@@ -11,7 +11,7 @@ static-analysis:
 	vendor/bin/phpstan.phar analyse -l 4 tests
 
 unit:
-	vendor/bin/phpunit tests/
+	vendor/bin/phpunit
 
 code-coverage:
 	vendor/bin/phpunit --coverage-html=coverage
