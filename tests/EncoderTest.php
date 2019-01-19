@@ -24,6 +24,19 @@ class EncoderTest extends TestCase
         Encoder::decode($json);
     }
 
+    public function testDecodeOnNullString()
+    {
+        $this->assertNull(Encoder::decode('null'));
+    }
+
+    public function testEncodeOnNonUtf8String()
+    {
+        $this->expectException(\JsonException::class);
+        $this->expectExceptionMessage('Malformed UTF-8 characters, possibly incorrectly encoded');
+
+        Encoder::encode("\xB1\x31");
+    }
+
     public function testValidEncode()
     {
         $data = [
