@@ -30,7 +30,7 @@
   },
   "require-dev": {
     "phpstan/phpstan-shim": "@stable",
-    "phpunit/phpunit": "@stable",
+    "phpunit/phpunit": "^7",
     "squizlabs/php_codesniffer": "@stable",
     "slevomat/coding-standard": "@stable"
   }
