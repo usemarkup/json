@@ -29,7 +29,7 @@
     "php": "^7.1"
   },
   "require-dev": {
-    "phpstan/phpstan-shim": "@stable",
+    "phpstan/phpstan": "@stable",
     "phpunit/phpunit": "^7",
     "squizlabs/php_codesniffer": "@stable",
     "slevomat/coding-standard": "@stable"
