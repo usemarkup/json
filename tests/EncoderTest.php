@@ -37,7 +37,6 @@ class EncoderTest extends TestCase
         Encoder::encode("\xB1\x31");
     }
     
-
     public function testEncodeOnUtf8String()
     {
         $result = Encoder::encode("hello 😂 world");
